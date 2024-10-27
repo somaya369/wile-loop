@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>personal information.</h1>
+    <div id="into">
+     <p id="name"> name:Ahmad</p>
+     <p id="surname"> surname:Doe</p>
+     <p id="email">email:Ahmadi@gmail .com</p>
+     <p id="phone">phone:07992785</p>
+    </div>
+    <button id="changeName"> change Name</button>
+    <button id="changeLast name"> change surname</button>
+    <button id="change email"> Change email</button>
+    <button  id="changephone">Change phone</button>
+    <script>
+        const into = document.getElementById("into")
+        const name = document.getElementById("name")
+        const surname = document.getElementById("surname")
+        const email = document.getElementById("email")
+        const phone = document.getElementById("phone")
+        const buttons = document.querySelectorAll("button")
+         let currentIndex = 2;
+        buttons.forEach((button, index) => {
+          button.addEventListener("click", () => {
+            switch (index) {
+                case 0:
+                    name.textContent = "name: Ali";
+                    break;
+                    case 1:
+                        surname.textContent = "surname:Ahmadi";
+                        break;
+                        case 2:
+                            email.textContent = "email: Ali2333@gmail.com";
+                            break;
+                            case 3:
+                                phone.textContent = "phone:0987656509";
+                                break;
+            
+                default:
+                    break;
+            }
+            currentIndex = index + 1;
+            if (currentIndex >= buttons.length) {
+                currentIndex = 0;
+                
+            }
+            
+        });
+    });
+    </script>
+</body>
+</html>
